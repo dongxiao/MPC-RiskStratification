@@ -36,4 +36,4 @@ add_test (chash)  <br/><br/>
   <br/><br/>  
   To simulate network latency or traffic bandwidth, use the Linux *tc* commands, or utilities contributed by github members such as https://gist.github.com/bidulock/11233356  <br/>
   
-  Running time are 143 seconds and 1253 seconds respectively in simulated a WAN setting (96ms round trip latency, 50MBps bandwidth), the experiments were performed on a system has an Intel i7-8750H 2.2 GHz CPU.
+  Running time are 193 seconds for PSI-CI and 422 seconds respectively for PSI-CI and PSI-HU in simulated a WAN setting (96ms round trip latency, 50MBps bandwidth), the experiments were performed on a system has an Intel i7-8750H 2.2 GHz CPU. The cardinality only version (PSI-CI-CA, PSI-HU-CA) runs ~10 seconds slower. To run the cardinality only version, check /test/ci.h and /test/hu.h for details.
