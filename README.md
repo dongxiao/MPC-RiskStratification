@@ -14,7 +14,7 @@
   2) Put the three lines at the bottom of ~/emp-toolkit/emp-sh2pc/CMakeLists.txt   <br/>
 add_test (hu)  <br/>
 add_test (ci2)  <br/>
-add_test (chash)  <br/>
+add_test (chash)  <br/><br/>
   3) Copy the two data folders into ~/emp-toolkit/emp-sh2pc/, as ~/emp-toolkit/emp-sh2pc/ComorbidityIndex/ and ~/emp-toolkit/emp-sh2pc/HighUtilizer/
   <br/><br/>  
   4) Open a terminal and make files using ~/emp-toolkit/emp-sh2pc/build$make
