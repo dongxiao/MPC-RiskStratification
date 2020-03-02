@@ -36,4 +36,4 @@ add_test (chash)  <br/><br/>
   <br/><br/>  
   To simulate network latency or traffic bandwidth, use the Linux *tc* commands, or utilities contributed by github members such as https://gist.github.com/bidulock/11233356  <br/>
   
-  Running time are 143 seconds and 1253 seconds respectively in simulated a WAN setting (48ms latency, 50MBps bandwidth), the experiments were performed on a system has an Intel i7-8750H 2.2 GHz CPU.
+  Running time are 143 seconds and 1253 seconds respectively in simulated a WAN setting (96ms round trip latency, 50MBps bandwidth), the experiments were performed on a system has an Intel i7-8750H 2.2 GHz CPU.
