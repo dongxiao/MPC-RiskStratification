@@ -52,7 +52,7 @@ Bit judge(Integer &a, Integer & b) {
 	
 	for (int i = 0; i < 24; ++i) {
 		Integer hu_count = S[i+12] - S[i];
-		anyhit = (hu_count >= Integer(7, 1, PUBLIC)) | anyhit;
+		anyhit = (hu_count >= Integer(7, 4, PUBLIC)) | anyhit;
 	}
 	return anyhit;
 }
