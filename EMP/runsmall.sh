@@ -1,0 +1,1 @@
+./bin/ci2 1 12345 ../ComorbidityIndex/small_sample_test/cmbd.1.dat & ./bin/ci2 2 12345 ../ComorbidityIndex/small_sample_test/cmbd.2.dat
