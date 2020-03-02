@@ -10,15 +10,15 @@
   <br/>Alternatively, use the docker container provided from: https://github.com/MPC-SoK/frameworks/tree/master/emp
   <br/><br/>
   1) Copy the two folders under /EMP into ~/emp-toolkit/emp-sh2pc/ as ~/emp-toolkit/emp-sh2pc/emp-clinic/ and ~/emp-toolkit/emp-sh2pc/test/
-  <br/>
+  <br/><br/>  
   2) Put the three lines at the bottom of ~/emp-toolkit/emp-sh2pc/CMakeLists.txt   <br/>
 add_test (hu)  <br/>
 add_test (ci2)  <br/>
 add_test (chash)  <br/>
   3) Copy the two data folders into ~/emp-toolkit/emp-sh2pc/, as ~/emp-toolkit/emp-sh2pc/ComorbidityIndex/ and ~/emp-toolkit/emp-sh2pc/HighUtilizer/
-  <br/>
+  <br/><br/>  
   4) Open a terminal and make files using ~/emp-toolkit/emp-sh2pc/build$make
-  <br/>
+  <br/><br/>  
   
 ## Performance Test
   <br/>
