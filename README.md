@@ -1,5 +1,5 @@
-## ClinicalEMP-toolkit
-  ClinicalEMP-toolkit repo contains the software demo for the following paper submission:<br/><br/>
+## MPC-RiskStratification
+  MPC-RiskStratification repo contains the software demo for the following paper submission:<br/><br/>
   Dong X, Randolph D, Weng C, Wang X. *Studying Patient Risk Stratification Using Garbled Circuits*,
   submitted to AMIA 2020 Annual Symposium, Chicago, IL, November, 2020.
   <br/>
