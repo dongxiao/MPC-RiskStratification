@@ -26,22 +26,6 @@ void parse_file(const char * filename, vector<uint64_t>& pid, vector<uint64_t>& 
 		}
 	}
 }
-/*
-//judge if the patient with data a & b should be output.
-Bit judge(Integer &a, Integer & b) {
-	if(a.size()!=b.size())error("size mismatch");
-
-	Integer u = a | b;
-	int coeff[] = {6,6,3,2,2,2,2,1,1,1,1,1,1,1,1,1,1};
-	Integer res(7, 0, PUBLIC);
-	for(int i = 0; i < 17; ++i) {
-		Integer updatedres = res + Integer(7, coeff[i], PUBLIC);
-		res = res.If(u[i], updatedres);
-	}
-	return res >= Integer(7, 9, PUBLIC);
-}*/
-
-//judge if the patient with data a & b should be output.
 
 Bit judge(Integer &a, Integer & b) {
 	if(a.size()!=b.size())error("size mismatch");
@@ -72,34 +56,6 @@ Bit judge(Integer &a, Integer & b) {
 	}
 	return anyhit;
 }
-
-
-//judge if the patient with data a & b should be output.
-/*
-Bit judge(Integer &a, Integer & b) {
-	if(a.size()!=b.size())error("size mismatch");
-	Integer u = a | b;
-	Integer v = a & b;
-	//uint32_t flag = u.reveal<uint32_t>(BOB);
-	//cout <<flag<<" ";	
-
-	Bit anyhit(PUBLIC, false);
-	
-	for (int i = 0; i < 21; ++i) {
-		Integer res(7, 0, PUBLIC);
-		for(int j = 0; j < 12; ++j) {
-			Integer updatedres = res + Integer(7, 1, PUBLIC);
-			res = res.If(u[i+j], updatedres);
-			updatedres = res + Integer(7, 1, PUBLIC);
-			res = res.If(v[i+j], updatedres);
-		}
-		int RES = res.reveal<int>(BOB);
-
-		anyhit = (res >= Integer(7, 5, PUBLIC)) | anyhit;
-	}
-	return anyhit;
-}
-*/
 
 void compute_hu(vector<vector<Integer>>& AlicePID, vector<vector<Integer>>& AliceFlag,
 					vector<Integer>& BobPID, vector<Integer>& BobFlag, int party) {
@@ -154,30 +110,6 @@ void compute_hu_ca(vector<vector<Integer>>& AlicePID, vector<vector<Integer>>& A
 	}
 	cout << "SUM: " << res_ca.reveal<int>() << endl;
 }
-/*
-void compute_hu_ca(vector<vector<Integer>>& AlicePID, vector<vector<Integer>>& AliceFlag,
-					vector<Integer>& BobPID, vector<Integer>& BobFlag, int party) {
-	if(AlicePID.size()!= AliceFlag.size())error("size 1!");
-	if(AlicePID.size()!= BobPID.size())error("size 2!");
-	if(BobPID.size()!= BobFlag.size())error("size 3!");
-
-	int cmp_count = 0;
-	Integer res_ca(32, 0, PUBLIC);
-
-	for(int i = 0; i < AlicePID. size(); ++i) {
-		uint64_t pid = BobPID[i].reveal<uint64_t>(BOB);
-		Bit anyhit(PUBLIC, false);
-		for (int j = 0; j < AlicePID[i].size(); ++j) {
-			cmp_count ++;
-			Bit eq = (AlicePID[i][j] == BobPID[i]);
-			Bit ju = judge(AliceFlag[i][j], BobFlag[i]);
-			Bit res = eq & ju;
-			Integer resplus1 = res_ca + Integer(32, 1, PUBLIC);
-			res_ca = If(res, resplus1, res_ca);
-		}
-	}
-	cout << "SUM: " << res_ca.reveal<int>() << endl;
-}*/
 
 void compute_hu_alice(vector<vector<uint64_t>>& pid, vector<vector<uint64_t>>& flag, NetIO * io) {
 	vector<vector<Integer>> AlicePID;
@@ -214,9 +146,9 @@ void compute_hu_alice(vector<vector<uint64_t>>& pid, vector<vector<uint64_t>>& f
 		BobPID.push_back(batcher.next<Integer>());
 		BobFlag.push_back(batcher.next<Integer>());
 	}
-
-	//compute_hu(AlicePID, AliceFlag, BobPID, BobFlag, ALICE);
-	compute_hu_ca(AlicePID, AliceFlag, BobPID, BobFlag, ALICE);
+	//Choose between the regular version and cardinality only version
+	compute_hu(AlicePID, AliceFlag, BobPID, BobFlag, ALICE);
+	//compute_hu_ca(AlicePID, AliceFlag, BobPID, BobFlag, ALICE);
 }
 
 void compute_hu_bob(vector<uint64_t>& pid, vector<uint64_t>& flag, NetIO* io) {
@@ -246,8 +178,9 @@ void compute_hu_bob(vector<uint64_t>& pid, vector<uint64_t>& flag, NetIO* io) {
 		BobPID.push_back(batcher.next<Integer>());
 		BobFlag.push_back(batcher.next<Integer>());
 	}
-	//compute_hu(AlicePID, AliceFlag, BobPID, BobFlag, BOB);
-	compute_hu_ca(AlicePID, AliceFlag, BobPID, BobFlag, BOB);
+	//Choose between the regular version and cardinality only version
+	compute_hu(AlicePID, AliceFlag, BobPID, BobFlag, BOB);
+	//compute_hu_ca(AlicePID, AliceFlag, BobPID, BobFlag, BOB);
 }
 
 
