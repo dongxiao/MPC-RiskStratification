@@ -37,3 +37,20 @@ add_test (chash)  <br/><br/>
   To simulate network latency or traffic bandwidth, use the Linux *tc* commands, or utilities contributed by github members such as https://gist.github.com/bidulock/11233356  <br/><br/>
   
   Running time are 193 seconds for PSI-CI and 422 seconds respectively for PSI-CI and PSI-HU in simulated a WAN setting (96ms round trip latency, 50MBps bandwidth), the experiments were performed on a system has an Intel i7-8750H 2.2 GHz CPU. The cardinality only version (PSI-CI-CA, PSI-HU-CA) runs ~10 seconds slower. To run the cardinality only version, check /test/ci.h and /test/hu.h for details.
+    <br/><br/>  
+    
+  ## Synthetic Data Generation
+  <br/>
+  download synthea package from https://github.com/synthetichealth/synthea
+  <br/>
+  ./run_synthea -s 1234 -p 2700000 Illinois "Chicago"
+  <br/>
+  note: enable csv output in /src/main/resources/synthea.properties
+  <br/><br/>  
+  2) Load synthetic data into encounter and demographics tables 
+  <br/>
+  ENCOUNTERCLASS = 'emergency', these are ED visits
+  <br/>
+  column LAT and LON from the demographics tables records the exact coordinates
+  <br/><br/>  
+  
