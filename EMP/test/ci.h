@@ -101,30 +101,6 @@ void compute_ci(vector<vector<Integer>>& AlicePID, vector<vector<Integer>>& Alic
 	}
 	cout <<"Number of Comp\t"<<cmp_count<<endl;
 }
-/*
-void compute_ci_ca(vector<vector<Integer>>& AlicePID, vector<vector<Integer>>& AliceFlag,
-					vector<Integer>& BobPID, vector<Integer>& BobFlag, int party) {
-	if(AlicePID.size()!= AliceFlag.size())error("size 1!");
-	if(AlicePID.size()!= BobPID.size())error("size 2!");
-	if(BobPID.size()!= BobFlag.size())error("size 3!");
-
-	int cmp_count = 0;
-	Integer res_ca(32, 0, PUBLIC);
-
-	for(int i = 0; i < AlicePID. size(); ++i) {
-		uint64_t pid = BobPID[i].reveal<uint64_t>(BOB);
-		Bit anyhit(PUBLIC, false);
-		for (int j = 0; j < AlicePID[i].size(); ++j) {
-			cmp_count ++;
-			Bit eq = (AlicePID[i][j] == BobPID[i]);
-			Bit ju = judge(AliceFlag[i][j], BobFlag[i]);
-			Bit res = eq & ju;
-			Integer resplus1 = res_ca + Integer(32, 1, PUBLIC);
-			res_ca = If(res, resplus1, res_ca);
-		}
-	}
-	cout << "SUM: " << res_ca.reveal<int>() << endl;
-}*/
 
 void compute_ci_alice(vector<vector<uint64_t>>& pid, vector<vector<uint32_t>>& flag, NetIO * io) {
 	vector<vector<Integer>> AlicePID;
@@ -161,9 +137,9 @@ void compute_ci_alice(vector<vector<uint64_t>>& pid, vector<vector<uint32_t>>& f
 		BobPID.push_back(batcher.next<Integer>());
 		BobFlag.push_back(batcher.next<Integer>());
 	}
-
-	//compute_ci(AlicePID, AliceFlag, BobPID, BobFlag, ALICE);
-	compute_ci_ca(AlicePID, AliceFlag, BobPID, BobFlag, ALICE);
+	//Choose between the regular version and cardinality only version
+	compute_ci(AlicePID, AliceFlag, BobPID, BobFlag, ALICE);
+	//compute_ci_ca(AlicePID, AliceFlag, BobPID, BobFlag, ALICE);
 }
 
 void compute_ci_bob(vector<uint64_t>& pid, vector<uint32_t>& flag, NetIO* io) {
@@ -193,8 +169,8 @@ void compute_ci_bob(vector<uint64_t>& pid, vector<uint32_t>& flag, NetIO* io) {
 		BobPID.push_back(batcher.next<Integer>());
 		BobFlag.push_back(batcher.next<Integer>());
 	}
-
-	//compute_ci(AlicePID, AliceFlag, BobPID, BobFlag, BOB);
-	compute_ci_ca(AlicePID, AliceFlag, BobPID, BobFlag, BOB);
+	//Choose between the regular version and cardinality only version
+	compute_ci(AlicePID, AliceFlag, BobPID, BobFlag, BOB);
+	//compute_ci_ca(AlicePID, AliceFlag, BobPID, BobFlag, BOB);
 }
 
