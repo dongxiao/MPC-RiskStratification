@@ -1,5 +1,5 @@
 ## MPC-RiskStratification
-  MPC-RiskStratification - software demo for the following paper submission:<br/><br/>
+  MPC-RiskStratification - software demo for the following paper submission:<br/>
   Studying Patient Risk Stratification Using Garbled Circuits, submitted to AMIA 2020 Annual Symposium, Chicago, IL, November, 2020.
   <br/>
 ## Installation
@@ -14,13 +14,12 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- emp-clinic <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- test  <br/>
   - README.md <br/><br/>
-  1) Copy the two folders under /EMP/emp-tool/ and /EMP/emp-ot/ into ~/emp-toolkit/emp-sh2pc/ as ~/emp-toolkit/emp-sh2pc/emp-clinic/ and ~/emp-toolkit/emp-sh2pc/test/
+  1) Copy the two folders emp-clinic and test into ~/emp-toolkit/emp-sh2pc/ as ~/emp-toolkit/emp-sh2pc/emp-clinic/ and ~/emp-toolkit/emp-sh2pc/test/
   <br/><br/>  
   2) Put the three lines at the bottom of ~/emp-toolkit/emp-sh2pc/CMakeLists.txt   <br/>
 add_test (hu)  <br/>
-add_test (ci2)  <br/>
-add_test (chash)  <br/><br/>
-  3) Copy the two data folders into ~/emp-toolkit/emp-sh2pc/, as ~/emp-toolkit/emp-sh2pc/ComorbidityIndex/ and ~/emp-toolkit/emp-sh2pc/HighUtilizer/
+add_test (ci2)  <br/><br/>
+  3) Copy the two data ComorbidityIndex and HighUtilizer into ~/emp-toolkit/emp-sh2pc/, as ~/emp-toolkit/emp-sh2pc/ComorbidityIndex/ and ~/emp-toolkit/emp-sh2pc/HighUtilizer/
   <br/><br/>  
   4) Open a terminal and make files using ~/emp-toolkit/emp-sh2pc/build$make
   <br/><br/>  
