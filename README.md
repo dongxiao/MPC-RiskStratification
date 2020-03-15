@@ -44,7 +44,7 @@ add_test (ci2)  <br/><br/>
     
   ## Synthetic Data Generation
   <br/>
-  download synthea package from https://github.com/synthetichealth/synthea
+  1) Download synthea package from https://github.com/synthetichealth/synthea
   <br/>
   ./run_synthea -s 1234 -p 2700000 Illinois "Chicago"
   <br/>
