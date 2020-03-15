@@ -16,10 +16,10 @@
   - README.md <br/><br/>
   1) Copy the two folders emp-clinic and test into ~/emp-toolkit/emp-sh2pc/ as ~/emp-toolkit/emp-sh2pc/emp-clinic/ and ~/emp-toolkit/emp-sh2pc/test/
   <br/><br/>  
-  2) Put the three lines at the bottom of ~/emp-toolkit/emp-sh2pc/CMakeLists.txt   <br/>
+  2) Put the two lines at the bottom of ~/emp-toolkit/emp-sh2pc/CMakeLists.txt   <br/>
 add_test (hu)  <br/>
 add_test (ci2)  <br/><br/>
-  3) Copy the two data ComorbidityIndex and HighUtilizer into ~/emp-toolkit/emp-sh2pc/, as ~/emp-toolkit/emp-sh2pc/ComorbidityIndex/ and ~/emp-toolkit/emp-sh2pc/HighUtilizer/
+  3) Copy the two data folder - ComorbidityIndex and HighUtilizer into ~/emp-toolkit/emp-sh2pc/, as ~/emp-toolkit/emp-sh2pc/ComorbidityIndex/ and ~/emp-toolkit/emp-sh2pc/HighUtilizer/
   <br/><br/>  
   4) Open a terminal and make files using ~/emp-toolkit/emp-sh2pc/build$make
   <br/><br/>  
