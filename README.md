@@ -56,4 +56,5 @@ add_test (ci2)  <br/><br/>
   <br/>
   column LAT and LON from the demographics tables records the exact coordinates
   <br/><br/>  
+  3) Use the method described in the Data Preparation section to generate datasets for institution A and instituion B
   
