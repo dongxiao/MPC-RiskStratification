@@ -13,7 +13,7 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- emp-clinic <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- test  <br/>
   - README.md <br/><br/>
-  1) Copy the two folders *emp-clinic* and *test* into *~/emp-toolkit/emp-sh2pc/* as *~/emp-toolkit/emp-sh2pc/emp-clinic/* and *~/emp-toolkit/emp-sh2pc/test/*
+  1) Copy the two folders _emp-clinic_ and _test_ into _~/emp-toolkit/emp-sh2pc/_ as _~/emp-toolkit/emp-sh2pc/emp-clinic/_ and _~/emp-toolkit/emp-sh2pc/test/_
   <br/><br/>  
   2) Put the two lines at the bottom of ~/emp-toolkit/emp-sh2pc/CMakeLists.txt   <br/>
 add_test (hu)  <br/>
