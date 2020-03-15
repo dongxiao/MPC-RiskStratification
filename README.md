@@ -11,8 +11,8 @@
   - ComorbidityIndex <br/>
   - HighUtilizer <br/>
   - EMP <br/>
-  \t- emp-clinic <br/>
-  \t- test  <br/><br/>
+    - emp-clinic <br/>
+    - test  <br/><br/>
   1) Copy the two folders under /EMP/emp-tool/ and /EMP/emp-ot/ into ~/emp-toolkit/emp-sh2pc/ as ~/emp-toolkit/emp-sh2pc/emp-clinic/ and ~/emp-toolkit/emp-sh2pc/test/
   <br/><br/>  
   2) Put the three lines at the bottom of ~/emp-toolkit/emp-sh2pc/CMakeLists.txt   <br/>
