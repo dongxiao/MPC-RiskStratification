@@ -12,8 +12,8 @@
   - HighUtilizer <br/>
   - EMP <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- emp-clinic <br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- test  <br/><br/>
-  - README.md <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- test  <br/>
+  - README.md <br/><br/>
   1) Copy the two folders under /EMP/emp-tool/ and /EMP/emp-ot/ into ~/emp-toolkit/emp-sh2pc/ as ~/emp-toolkit/emp-sh2pc/emp-clinic/ and ~/emp-toolkit/emp-sh2pc/test/
   <br/><br/>  
   2) Put the three lines at the bottom of ~/emp-toolkit/emp-sh2pc/CMakeLists.txt   <br/>
