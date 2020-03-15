@@ -1,5 +1,5 @@
 ## MPC-RiskStratification
-  MPC-RiskStratification repo contains the software demo for the following paper submission:<br/><br/>
+  MPC-RiskStratification - software demo for the following paper submission:<br/><br/>
   Studying Patient Risk Stratification Using Garbled Circuits, submitted to AMIA 2020 Annual Symposium, Chicago, IL, November, 2020.
   <br/>
 ## Installation
@@ -8,6 +8,11 @@
   <br/>Follow the instruction from: https://github.com/emp-toolkit/emp-sh2pc
   <br/>Alternatively, use the docker container provided from: https://github.com/MPC-SoK/frameworks/tree/master/emp
   <br/><br/>
+  - ComorbidityIndex <br/>
+  - HighUtilizer <br/>
+  - EMP <br/>
+       - emp-clinic <br/>
+       - test  <br/><br/>
   1) Copy the two folders under /EMP/emp-tool/ and /EMP/emp-ot/ into ~/emp-toolkit/emp-sh2pc/ as ~/emp-toolkit/emp-sh2pc/emp-clinic/ and ~/emp-toolkit/emp-sh2pc/test/
   <br/><br/>  
   2) Put the three lines at the bottom of ~/emp-toolkit/emp-sh2pc/CMakeLists.txt   <br/>
