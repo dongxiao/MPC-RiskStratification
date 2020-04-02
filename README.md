@@ -22,7 +22,10 @@ add_test (ci2)  <br/><br/>
   <br/><br/>  
   4) Open a terminal and make files using ~/emp-toolkit/emp-sh2pc/build$make
   <br/><br/>  
-  
+  5) To switch between the cardinality mode (report only patient count) and regular mode (report individuals), use correct versions in compute_hu() and compute_ci() functions. See line 149, 181 in /EMP/test/hu.h for the High utilizer protoco, or line 140, 172 in /EMP/test/ci.h for Charlson index protocol. Notice changes need to be applied to both parties.
+  <br/><br/> 
+  6) To adjust the thresholds in figure 3,4, see the judge functions in ci.h and hu.h. Currently, the threshold for Charlson index value is set to 8 for PSI-CI, and total ED visits is set to 4 for PSI-HU. More specifically, at line 55 in the hu.h, anyhit = (hu_count >= Integer(7, 4, PUBLIC)) | anyhit, 7 here refers to an 7 bit integer to hold the result for the jointly computed totally number ED visits, and 4 is the threshold >= 4. Similarly, at line 51 in the ci.h, return res >= Integer(7, 8, PUBLIC), 8 is the threshold for jointly computed Charlson index value, the protocol only reports over 8 here.
+  <br/><br/>    i
 ## Performance Test
   <br/>
   1) To run the Comorbidity Index Protocol, open two terminals, and type:
