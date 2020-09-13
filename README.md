@@ -1,5 +1,5 @@
 ## MPC-RiskStratification
-  MPC-RiskStratification - software demo for the following paper submission - Studying Patient Risk Stratification Using Garbled Circuits, submitted to AMIA 2020 Annual Symposium, Chicago, IL, November, 2020.
+  MPC-RiskStratification - software demo for the paper submission to AMIA 2021 Informatics Summit.
   <br/>
 ## Installation
   <br/>
